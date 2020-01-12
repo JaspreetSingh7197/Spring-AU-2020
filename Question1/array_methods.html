@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<body>
+<script>
+//1.concat()
+var arr1=[1,2,3,4,5,6,7,8];
+var arr2=['a','b','c'];
+var concatarr=arr1.concat(arr2);
+console.log(concatarr);                               //1,2,3,4,5,6,7,8,'a','b','c'
+
+//2.every()
+var sal=[20000,18000,15000];
+function isgreater(element,index,array)
+{
+  return (element>=15000)
+}
+console.log(sal.every(isgreater));                    //true
+
+
+
+
+//3.filter()
+var age=[23,24,25,26];
+function over24(value)
+{
+  return value>24;
+}
+console.log(outp=age.filter(over24));                   //Array[25,26]
+
+
+
+
+//4.forEach()
+var marks=[45,46,38,19];
+marks.forEach(add3);
+
+function add3(val,index,a)
+{
+  a[index]=val+3;
+}
+
+console.log(marks);                                    // Array(4) [48,49,41,22]
+
+
+
+
+//5.indexOf()
+
+var names=["abc","def","ghi","jkl"];
+var i=names.indexOf("def");
+console.log(i);                                         // 1
+
+
+
+
+//6.join()
+var names=["abc","def","ghi","jkl"];
+var neww=names.join();
+console.log(neww);                                       //abc,def,ghi,jkl 
+
+
+
+
+
+//7.lastIndexOf()
+var names=["abc","def","ghi","jkl","ghi"];
+console.log(names.lastIndexOf("ghi"));                   // 4
+
+
+
+//8.map()
+var num=[2,3,4,5];
+function sqr(ele)
+{
+  return ele*ele;
+}
+console.log(num.map(sqr));
+
+
+//9.pop()
+var names=["abc","def","ghi","jkl","ghi"];
+names.pop();
+console.log(names);                                       //Array(4) ["abc","def","ghi","jkl"]
+
+
+//10.push()
+var names=["abc","def","ghi","jkl"];
+names.push("mno");
+console.log(names);
+
+
+//11.reduce()
+var marks=[23,24,25,19];
+var sum=0;
+function totmarks(sum,ele)
+{
+  return sum+ele;
+} 
+console.log(marks.reduce(totmarks));
+
+
+
+//12.reduceRight()
+
+var marks=[21,23,24];
+function del(sum,ele)
+{
+  return sum-ele;
+}
+console.log(marks.reduceRight(del));                     // -20
+
+
+
+
+
+//13.reverse()
+
+var alpha=['a','b','c','d'];
+alpha.reverse();
+console.log(alpha);
+
+//14.shift()
+
+var alpha=['a','b','c','d'];
+alpha.shift();
+console.log(alpha);
+
+//15.slice()
+
+var alpha=['a','b','c','d'];
+var newalpha=alpha.slice(1,2);
+console.log(newalpha);
+
+
+
+//16.some()
+
+var sal=[20000,18000,10000];
+function isgreater(element,index,array)
+{
+  return (element>=15000)
+}
+console.log(sal.some(isgreater));
+
+//17.sort()
+
+var sal=[20000,18000,10000];
+sal.sort();
+console.log(sal);
+
+
+
+//18.splice()
+var sal=[20000,18000,10000,15000];
+sal.splice(2,1,"16000");
+console.log(sal);
+
+
+
+//19.toString()
+var sal=[20000,18000,10000,15000];
+var strsal=sal.toString();
+console.log(strsal);
+
+//20. unshift()
+
+var sal=[20000,18000,10000,15000];
+sal.unshift(30000,25000);
+console.log(sal);
+
+</script></body>
+</html>

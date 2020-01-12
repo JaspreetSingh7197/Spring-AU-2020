@@ -1,0 +1,4 @@
+Q.Difference between newline and carriage return:
+Ans:
+    newline(\n) moves cursor to the next line.It stops the current line wherever it is encountered.
+    Whereas, carriage return(\r) moves the cursor to the 1st position of the same line without erasing any character.

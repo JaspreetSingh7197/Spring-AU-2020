@@ -1,0 +1,110 @@
+<!Doctype html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+	<form name = "myform" >
+		<h2> Assignment4 of day3</h2>
+		<br><br>
+
+ 		Username :   <input type="text" name="username"><br>
+           <div class='input-group'>
+                <span class="input-group-addon">Country</span>
+                <select class='vi'>
+                    <option value="India">India</option>
+                    <option value="U.S.A">U.S.A</option>
+                    <option value="UK">UK</option>
+                    <option value="AUS">AUS</option>
+                  </select>                  
+                     </div>
+
+        Usernames:  <input type="text" id= "newtext" onkeyup="func()" ><br>
+
+        <ul id="new">
+        	<li><a href="#">ohoias</a></li>
+        	<li><a href="#">tyrytv</a></li>
+        	<li><a href="#">sadauh</a></li>
+        	<li><a href="#">noich</a></li>
+        	<li><a href="#">qweq</a></li>
+        	<li><a href="#">lkas</a></li>
+        	<li><a href="#">plpo</a></li>
+        	<li><a href="#">vxcvz</a></li>
+        	<li><a href="#">zviuow</a></li>
+        </ul>
+        
+
+        <br>
+        <br>
+        <p>Want to sort following users?Click sort button:</p>
+        <button onclick="sort()">Sort</button>
+
+        <ul id="mylist">
+        	<li>ohoias</li>
+        	<li>tyrytv</li>
+        	<li>sadauh</li>
+        	<li>noich</li>
+        	<li>qweq</li>
+        	<li>lkas</li>
+        	<li>plpo</li>
+        	<li>vxcvz</li>
+        	<li>zviuow</li>
+        </ul>
+
+        <script>
+        	function func()
+        	{
+        		var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("newtext");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("new");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) 
+        {
+            li[i].style.display = "";
+        } 
+        else 
+        {
+            li[i].style.display = "none";
+        }
+    }
+        	}
+          
+
+          function sort() {
+  var list,i,b,shouldSwitch;
+  var list = document.getElementById("mylist");
+  var switching = true;
+
+  while (switching) {
+ 
+    switching = false;
+    b = list.getElementsByTagName("li");
+    
+    for (i = 0; i < (b.length - 1); i++) 
+    {
+ 
+      shouldSwitch = false;
+     
+      if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+        
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if (shouldSwitch) {
+
+      b[i].parentNode.insertBefore(b[i + 1], b[i]);
+      switching = true;
+    }
+  }
+}
+
+        </script>
+    </form>
+</body>
+</html>
