@@ -1,0 +1,32 @@
+1) before insert trigger
+
+create trigger mytrig
+before insert
+on employee for each row
+begin
+  declare rowcnt int;
+  select count(*) into rowcnt from employee;
+  if rowcnt=4 then
+     delete from employee limit 1;
+  end if;
+
+
+2)before delete trigger
+
+create trigger mytrig2
+before delete on employee for each row
+begin
+   update table del_entries
+   set rows=rows-1;
+end
+
+3)before update trigger
+
+create trigger mytrig3
+before update on employee for each row
+begin
+    declare err varchar(255)
+    set err="update going to happen";
+    SIGNAL SQLSTATE '45000'
+      SET MESSAGE_TEXT= err
+end if;

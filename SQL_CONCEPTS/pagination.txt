@@ -1,0 +1,6 @@
+CREATE procedure pag(in page_no int,in row_num int)
+BEGIN
+  declare c int;
+  set c=page_no*row_num;
+  select * from employee limit row_num offset c;     
+END
