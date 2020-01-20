@@ -1,0 +1,25 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <label>
+        Name:
+        <input type="text" formControlName="usname"><br>
+    </label>
+    <label>
+        E-Mail:
+        <input type="text" formControlName="email"><br>
+    </label>
+    <div formGroupName="office_address">
+            <label>
+                    Area:
+                    <input type="text" formControlName="area"><br>
+            </label>    
+        <label>
+                    City:
+                    <input type="text" formControlName="city"><br>
+            </label>
+    </div> 
+
+
+    <button type="submit">Submit</button>
+    
+</form>
+<button routerLink="/display">display_pls</button>
