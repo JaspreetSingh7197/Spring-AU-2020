@@ -1,0 +1,7 @@
+application:
+  name: springdemo2
+  package: com.springau.springdemo2
+spring:
+  application:
+    name: ${application.name}
+

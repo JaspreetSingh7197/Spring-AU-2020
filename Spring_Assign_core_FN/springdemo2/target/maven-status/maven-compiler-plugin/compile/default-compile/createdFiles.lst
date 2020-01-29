@@ -1,0 +1,4 @@
+com/springau/springdemo2/App.class
+com/springau/springdemo2/aspects/EmployeeAspect.class
+com/springau/springdemo2/model/Employee.class
+com/springau/springdemo2/services/EmployeeManager.class

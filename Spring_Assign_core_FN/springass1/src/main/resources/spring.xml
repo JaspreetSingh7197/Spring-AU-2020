@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+           
+           <bean id="emp1" class="com.springau.springass1.models.Employee">
+           		<constructor-arg value="Joseph" type="String"></constructor-arg>
+           		<constructor-arg value="211" type="Integer"></constructor-arg>           
+           </bean>
+           
+           <bean id="emp2" class="com.springau.springass1.models.Employee">
+           		<constructor-arg value="abdul" type="String"></constructor-arg>
+           		<constructor-arg value="212" type="Integer"></constructor-arg>           
+           </bean>
+           
+            <bean id="emp3" class="com.springau.springass1.models.Employee">
+           		<constructor-arg value="raj" type="String"></constructor-arg>
+           		<constructor-arg value="213" type="Integer"></constructor-arg>           
+           </bean>
+           
+           <bean id="emp" class="com.springau.springass1.models.EmployeeManager">
+				<constructor-arg>
+				    <map>
+					    <entry key="1" value-ref="emp1"/>
+					    <entry key="2" value-ref="emp2"/>
+					    <entry key="3" value-ref="emp3"/>
+				    </map>
+			    </constructor-arg>         
+           </bean>
+           
+
+    
+ </beans>
